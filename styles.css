@@ -1,0 +1,186 @@
+/* General */
+body, html {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  font-family: 'Arial', sans-serif;
+}
+
+.pantalla-completa {
+  width: 100vw;
+  height: 100dvh; /* adapta mejor a móviles y evita scroll no deseado */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* asegura que nada se desborde hacia fuera */
+}
+
+/* Sección portada */
+.portada {
+  background-image: url(''); /* Cambiar aquí la imagen de portada */
+  background-size: cover;
+  background-position: center;
+}
+
+/* Flecha */
+.flecha {
+  position: absolute;
+  bottom: 20px;
+  cursor: pointer;
+  animation: saltar 2s infinite;
+  z-index: 10; /* Asegura que esté por encima del carrusel */
+}
+
+.flecha img {
+  width: 48px;
+  height: 48px;
+  opacity: 0.8;
+  transition: opacity 0.3s;
+}
+
+.flecha img:hover {
+  opacity: 1;
+}
+
+/* Animación flecha */
+@keyframes saltar {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(10px); }
+}
+
+/* Sección quienes somos */
+.quienes {
+  background-image: url('Imagen/Imagen de bienvenida.jpg'); /* Cambiar aquí la imagen de esta sección */
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+}
+
+.contenido-quienes {
+  background-color: rgba(0, 0, 0, 0.5); /* fondo semitransparente para el texto */
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 700px;
+}
+
+/* Sección contacto */
+.contacto {
+  background-color: #111;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.botones-contacto {
+  display: flex;
+  gap: 2rem;
+}
+
+.btn-contacto {
+  background: none;
+  border: 2px solid white;
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+
+.btn-contacto:hover {
+  background-color: white;
+  color: black;
+}
+
+/* Botón volver arriba */
+#btn-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+  z-index: 1000;
+  display: none; /* oculto por defecto */
+}
+
+#btn-top img {
+  width: 48px;
+  height: 48px;
+  opacity: 0.8;
+  transition: opacity 0.3s;
+}
+
+#btn-top img:hover {
+  opacity: 1;
+}
+
+
+/* Carrusel portada */
+.carrusel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  z-index: 1;
+}
+
+.slide.activo {
+  opacity: 1;
+  z-index: 2;
+}
+
+.control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 3rem;
+  color: white;
+  cursor: pointer;
+  z-index: 3;
+  user-select: none;
+  padding: 0 15px;
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
+
+.control:hover {
+  opacity: 1;
+}
+
+.control.izquierda {
+  left: 20px;
+}
+
+.control.derecha {
+  right: 20px;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  color: #aaa; /* Color gris claro para estilo sofisticado */
+  background-color: #111; /* Combina con el fondo de la sección contacto */
+  border-top: 1px solid #333; /* Línea sutil para separación */
+}
+
+.footer p {
+  margin: 0;
+  font-weight: 300;
+  letter-spacing: 1px;
+}

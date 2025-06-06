@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lonestore®</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+
+  <!-- Sección 1: Carrusel de portada -->
+<section id="inicio" class="pantalla-completa portada">
+  <div id="carrusel" class="carrusel">
+    <div class="slide activo" style="background-image: url('Imagen/carruselluno.jpg');"></div>
+    <div class="slide" style="background-image: url('Imagen/carruselldos.jpg');"></div>
+    <div class="slide" style="background-image: url('Imagen/carruselltres.jpg');"></div>
+    <div class="slide" style="background-image: url('Imagen/carrusellcuatro.jpg');"></div>
+    <!-- 🔁 Agregá más divs como estos si querés más imágenes -->
+  </div>
+
+  <!-- Flechas del carrusel -->
+  <div class="control izquierda" onclick="cambiarSlide(-1)">&#10094;</div>
+  <div class="control derecha" onclick="cambiarSlide(1)">&#10095;</div>
+
+  <!-- Flecha hacia abajo -->
+  <div id="flecha-abajo-inicio" class="flecha" onclick="scrollToSection('quienes')">
+  <img src="Imagen/Boton abajo.png" alt="Flecha hacia abajo" />
+</div>
+</section>
+
+  <!-- Sección 2: Quiénes Somos -->
+<section id="quienes" class="pantalla-completa quienes">
+  <div class="contenido-quienes">
+    <h1>Quiénes somos</h1>
+    <p>Lonestore es un emprendimiento dedicado a crear y ofrecer productos únicos para el hogar. Fabricamos piezas en fibrofácil y madera, enfocadas en la funcionalidad, el diseño y la calidez que solo los materiales nobles pueden transmitir.</p>
+  </div>
+  <div id="flecha-abajo-quienes" class="flecha" onclick="scrollToSection('contacto')">
+  <img src="Imagen/Boton abajo.png" alt="Flecha hacia abajo" />
+</div>
+</section>
+
+  <!-- Sección 3: Contacto -->
+  <section id="contacto" class="pantalla-completa contacto">
+    <div class="botones-contacto">
+      <a href="https://instagram.com" target="_blank" class="btn-contacto">Instagram</a>
+      <a href="https://wa.me/1234567890" target="_blank" class="btn-contacto">WhatsApp</a>
+    </div>
+  </section>
+
+  <!-- Botón para volver al inicio -->
+<div id="btn-top" onclick="scrollToSection('inicio')">
+  <img src="Imagen/Boton arriba.png" style=";" alt="Subir al inicio" />
+</div>
+
+  <script src="script.js"></script>
+
+  <footer class="footer">
+  <p>© 2025 Todos los derechos reservados.</p>
+</footer>
+</body>
+</html>
