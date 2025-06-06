@@ -4,7 +4,7 @@ function scrollToSection(id) {
   const targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
   const startPosition = window.pageYOffset;
   const distance = targetPosition - startPosition;
-  const duration = 1000; // duración en milisegundos (ajustá si querés más lenta)
+  const duration = 300; // duración en milisegundos (ajustá si querés más lenta)
   let start = null;
 
   function step(timestamp) {
